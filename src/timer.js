@@ -1,22 +1,36 @@
 
 
-const btnStart= document.querySelector("#timerStart");
-const btnPause= document.querySelector("#timerPause");
-const btnResume= document.querySelector("#timerResume");
-const playTime=document.querySelector("#timerTime");
-let IdfInterval=0;
-let date=0;
+let btnStart;
+let btnPause;
+let btnResume;
+let playTime;
+let IdfInterval;
+let date;
 
+const initTimer= ()=>{
+    btnStart= $("#timerStart");
+    btnPause= $("#timerPause");
+    btnResume= $("#timerResume");
+    playTime= $("#timerTime");
+    IdfInterval=0;
+    date=0;
+    
+    btnStart.on("click",start);
+    btnPause.on("click",pause);
+    btnResume.on("click",resume);
+
+}
+ 
 const toggle=(disappear,appear)=>{
-        disappear.classList.add("d-none");
-        disappear.classList.remove("d-block");
-        appear.classList.add("d-block");
-        appear.classList.remove("d-none");
+        disappear.addClass("d-none");
+        disappear.removeClass("d-block");
+        appear.addClass("d-block");
+        appear.removeClass("d-none");
 };
 
 
-const increment = ()=>{
-    playTime.innerHTML= date.toISOString().substr(14,5);
+const increment = ()=>{ 
+    playTime.text(date.toISOString().substr(14,5));
     date.setSeconds(date.getSeconds()+1);
   
 };
@@ -45,9 +59,7 @@ const stop=()=>{
     clearInterval(IdfInterval);
 }
 
-btnStart.addEventListener("click",start);
-btnPause.addEventListener("click",pause);
-btnResume.addEventListener("click",resume);
+
 
 
 

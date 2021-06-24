@@ -15,7 +15,7 @@
   \********************/
 /***/ (() => {
 
-eval("/*\r\n// récupérer un élément\r\nconst btnStart= document.querySelector(\"#timerStart\"); \r\n\r\nconst sayHeloo=()=>{\r\n    // Modifier l'apparence d'un élément\r\n    \r\n    btnStart.classList.add(\"d-none\");\r\n    console.log(\"Hello\");\r\n    console.log(\"je click\");\r\n};\r\nsayHeloo();\r\n//  Ajouter un élément\r\nbtnStart.addEventListener(\"click\",sayHeloo); */\n\n/*\r\nconst start=()=> {\r\n    btnStart.classList.replace(\"d-blolck\",\"d-none\");\r\n    btnStart.classList.replace(\"d-none\",\"d-block\");\r\n}\r\n\r\nconst pause=()=>{\r\n    btnStart.classList.replace(\"d-blolck\",\"d-none\");\r\n    btnStart.classList.replace(\"d-none\",\"d-block\");\r\n\r\n}\r\nconst resume=()=>{\r\n    btnStart.classList.replace(\"d-blolck\",\"d-none\");\r\n    btnStart.classList.replace(\"d-none\",\"d-block\");\r\n\r\n}\r\nbtnStart.addEventListener(\"click\",start);\r\nbtnStart.addEventListener(\"click\",pause);\r\nbtnStart.addEventListener(\"click\",resume);*/\n\n//# sourceURL=webpack://html-training/./src/app.js?");
+eval("$(initgrille);\n\n//# sourceURL=webpack://html-training/./src/app.js?");
 
 /***/ }),
 
